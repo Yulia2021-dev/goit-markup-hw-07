@@ -31,6 +31,11 @@ address {
   margin-top: 20px;
 }
 
+address {
+  font-style: normal;
+}
+
+
 
 .list {
   list-style: none;
@@ -38,4 +43,32 @@ address {
   margin: 0;
 }
 
+.h-line {
+  border-bottom: 1px solid #eee;
+}
+
+
+.banner {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: top right, center;
+  background-repeat: no-repeat;
+  background-color: var(--soft-grey-bg-gradient);
+}
+
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 

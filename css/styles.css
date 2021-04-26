@@ -55,6 +55,35 @@ address {
   margin: 0;
 }
 
+.h-line {
+  border-bottom: 1px solid #eee;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -27px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 1;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  /* transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.banner {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: top right, center;
+  background-repeat: no-repeat;
+  background-color: var(--soft-grey-bg-gradient);
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -212,32 +241,6 @@ address {
   transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-navigation {
-  display: flex;
-  align-items: center;
-}
-
-.features, .works, .our-team, .regular-customers {
-  padding: 95px 0;
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 500;
-  transition: color var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link:hover, .link:focus {
-  color: var(--accent-color);
-}
-
-/* Меню навигации */
-.navigation {
-  height: 80px;
-  padding: 25px 0;
-}
-
 .logo {
   font-size: 26px;
   font-family: var(--secondary-font-family);
@@ -251,38 +254,32 @@ address {
   color: var(--accent-color);
 }
 
-.phone {
-  transform: translateY(2px);
+.section-heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 50px;
 }
 
-.active {
-  color: var(--accent-color);
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.active::after {
-  content: '';
-  position: absolute;
-  bottom: -27px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  opacity: 1;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-  /* transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+.grid a {
+  text-decoration: none;
 }
 
-/* Секция Hero */
-.banner {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../images/bg.jpg);
-  background-size: cover;
-  background-position: top right, center;
-  background-repeat: no-repeat;
-  background-color: var(--soft-grey-bg-gradient);
+.grid__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.grid__item:hover .card-overlay-text {
+  transform: translateY(0);
+  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero {
@@ -306,146 +303,6 @@ address {
   margin: 0 auto 30px;
 }
 
-/* Секция преимуществ */
-.features__item {
-  width: 270px;
-}
-
-.features__item:not(:last-child) {
-  margin-right: 20px;
-}
-
-.features__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  color: var(--main-text-color);
-}
-
-.features__text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-color);
-}
-
-.features__block {
-  padding: 25px 100px;
-  background: #F5F4FA;
-  border-radius: var(--small-circled);
-}
-
-/* Чем мы занимаемся */
-.section-heading {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.166;
-  text-align: center;
-  color: var(--main-text-color);
-  margin-bottom: 50px;
-}
-
-.works__way {
-  position: relative;
-}
-
-.works__title {
-  font-family: var(--main-font-family);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  padding: 27px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--main-bg-color);
-}
-
-.works__text {
-  position: absolute;
-  width: 370px;
-  bottom: 0;
-  background: rgba(47, 48, 58, 0.8);
-}
-
-/* Наша команда */
-.team {
-  background: #F5F4FA;
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-.team__item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.187;
-  margin-bottom: 16px;
-  text-align: center;
-  color: var(--secondary-color);
-}
-
-.team__card {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  text-align: center;
-  color: var(--main-text-color);
-  width: 270px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team__body {
-  background-color: var(--main-bg-color);
-  padding: 30px;
-}
-
-.person {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.187;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Секция постоянные клиенты */
-.customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.customers__link {
-  border: 1px solid #afb1b8;
-  width: 170px;
-  height: 90px;
-  border-radius: var(--small-circled);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.customers__link:hover .icon,
-.customers__link:focus .icon {
-  fill: var(--accent-color);
-}
-
-.customers__link:hover, .customers__link:focus {
-  border-color: var(--accent-color);
-}
-
-.customers__list .icon {
-  fill: var(--icons-text-color);
-  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.customers__link:focus {
-  outline-color: var(--accent-color);
-}
-
-/* Секция подвал */
 .contacts__logo {
   flex-basis: calc((50% - 45px) / 2);
 }
@@ -580,6 +437,172 @@ address {
   border-radius: 4px;
 }
 
+.features__item {
+  width: 270px;
+}
+
+.features__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.features__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+
+.features__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.features__block {
+  padding: 25px 100px;
+  background: #F5F4FA;
+  border-radius: var(--small-circled);
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.features, .works, .our-team, .regular-customers {
+  padding: 95px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover, .link:focus {
+  color: var(--accent-color);
+}
+
+/* Меню навигации */
+.navigation {
+  height: 80px;
+  padding: 25px 0;
+}
+
+.phone {
+  transform: translateY(2px);
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+/* Секция Hero */
+/* Секция преимуществ */
+/* Чем мы занимаемся */
+.works__way {
+  position: relative;
+}
+
+.works__title {
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  padding: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-bg-color);
+}
+
+.works__text {
+  position: absolute;
+  width: 370px;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+/* Наша команда */
+.team {
+  background: #F5F4FA;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.team__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.187;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.team__card {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--main-text-color);
+  width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__body {
+  background-color: var(--main-bg-color);
+  padding: 30px;
+}
+
+.person {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.187;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Секция постоянные клиенты */
+.customers {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers__link {
+  border: 1px solid #afb1b8;
+  width: 170px;
+  height: 90px;
+  border-radius: var(--small-circled);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers__link:hover .icon,
+.customers__link:focus .icon {
+  fill: var(--accent-color);
+}
+
+.customers__link:hover, .customers__link:focus {
+  border-color: var(--accent-color);
+}
+
+.customers__list .icon {
+  fill: var(--icons-text-color);
+  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers__link:focus {
+  outline-color: var(--accent-color);
+}
+
+/* Секция подвал */
 /* Модальное окно */
 .backdrop {
   position: fixed;
@@ -901,24 +924,6 @@ address {
   z-index: 1;
 }
 
-.h-line {
-  border-bottom: 1px solid #eee;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.grid a {
-  text-decoration: none;
-}
-
-.grid__item:nth-child(3n) {
-  margin-right: 0;
-}
-
 .card-info__title {
   font-weight: bold;
   font-size: 18px;
@@ -933,11 +938,6 @@ address {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
-}
-
-.grid__item:hover .card-overlay-text {
-  transform: translateY(0);
-  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .business-card:hover, .business-card:focus {
