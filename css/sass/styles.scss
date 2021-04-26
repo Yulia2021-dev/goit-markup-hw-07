@@ -7,17 +7,14 @@
 
 @import "./components/button";
 @import "./components/menu";
-@import "./components/contacts-link";
 @import "./components/social-icons";
 @import "./components/logo";
 @import "./components/title";
 @import "./components/filter-btn";
 @import "./components/custom-chekbox";
-@import "./components/contacts-link";
+@import "./components/link";
 @import "./components/modal";
 @import "./components/modal-form";
-
-
 
 @import "./layouts/hero";
 @import "./layouts/features";
@@ -27,102 +24,10 @@
 @import "./layouts/footer";
 @import "./layouts/grid";
 @import "./layouts/business-card";
+@import "./layouts/main";
 
 
 
-
-
-
-
-.main-navigation {
-    display: flex;
-    align-items: center;
-}
-
-.features, .works, .our-team, .regular-customers {
-    padding: 95px 0;
-}
-
-.link {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
-    transition: color var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link:hover, .link:focus {
-    color: var(--accent-color);
-}
-
-/* Меню навигации */
-.navigation {
-    height: 80px;
-    padding: 25px 0;
-}
-
-
-.phone {
-    transform: translateY(2px);
-  }
-  .active {
-    color: var(--accent-color);
-  }
-  
-
-/* Секция Hero */
-
-/* Секция преимуществ */
-
-/* Чем мы занимаемся */
-
-/* Наша команда */
-
-/* Секция постоянные клиенты */
-
-/* Секция подвал */
-
-/* Модальное окно */
-
-
-
-
-
-
-
-
-/* Портфолио */
-
-.main-section {
-    padding-top: 95px;
-    padding-bottom: 90px;
-}
-.secondary-nav {
-    margin-bottom: 50px;
-}
-.site-nav {
-    display: flex;
-    justify-content: center;
-}
-.site-nav .button {
-    display: block;
-}
-.site-nav__item:not(:last-child) {
-    margin-right: 10px;
-    background-repeat: 4px;
-}
-
-
-.section-heading__portfolio {
-    display: none;
-}
-
-.portfolio {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 2;
-    letter-spacing: .06em;
-    color: var(--main-text-color);
-}
 
 
 
@@ -141,17 +46,6 @@
     line-height: 1.71;
     color: var( --secondary-color);
 } */
-
-
-
-
-
-
-
-
-
-
-
 
 /* .portfolio-item {
     font-weight: 400;
@@ -173,11 +67,6 @@
 
 
 
-
-
-#contract {
-    margin-left: 14px;
-}
 
 
 

@@ -1,9 +1,13 @@
 .features__item {
   width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 }
-.features__item:not(:last-child) {
-  margin-right: 20px;
-}
+
+
+
 .features__title {
   font-weight: 700;
   font-size: 14px;
@@ -13,6 +17,7 @@
   text-transform: uppercase;
   color: var( --main-text-color);
 }
+
 .features__text {
   font-size: 14px;
   line-height: 1.71;

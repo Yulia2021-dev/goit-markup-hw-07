@@ -1,3 +1,9 @@
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
 .menu-nav {
   width: 295px;
   display: inline-flex;
@@ -50,4 +56,12 @@
   border-radius: 2px;
   background-color: var(--accent-color);
   /* transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.phone {
+  transform: translateY(2px);
+}
+
+.menu-nav__item > .active {
+  color: var(--accent-color);
 }
