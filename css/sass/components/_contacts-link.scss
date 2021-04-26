@@ -1,0 +1,28 @@
+.contacts {
+  display: inline-flex;
+  margin-left: 275px;
+}
+.contacts__link {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+.contacts__link:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--accent-color);
+}
+.contacts__link .icon {
+  fill: var(--secondary-color);
+  margin-right: 10px;
+  transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts__link:hover .icon, .contacts__link:focus .icon {
+  fill: var(--accent-color);
+}
+.contacts__item {
+  display: inline;
+}
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
