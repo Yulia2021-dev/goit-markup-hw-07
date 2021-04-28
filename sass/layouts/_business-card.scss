@@ -3,6 +3,11 @@
   margin-bottom: 30px;
   border: 1px solid #eee;
   @include smooth-transition;
+
+  &:hover, &:focus {
+    box-shadow: $dark-box-shadow;
+  }
+  
 }
 
 .card-overlay {
@@ -44,6 +49,3 @@
   color: var(--secondary-color);
 }
 
-.business-card:hover, .business-card:focus {
-  box-shadow: $dark-box-shadow;
-}

@@ -93,8 +93,6 @@
   }
 }
 
-
-
 .footer-icon {
   position: relative;
 }
@@ -107,11 +105,11 @@
 
 .subscription__input  {
   background-color: transparent;
-}
 
-.subscription__input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .subscription-form-link {

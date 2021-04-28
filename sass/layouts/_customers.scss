@@ -3,6 +3,7 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .customers__link {
   border: 1px solid #afb1b8;
   width: 170px;
@@ -12,18 +13,23 @@
   justify-content: center;
   align-items: center;
   transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
-.customers__link:hover .icon, 
-.customers__link:focus .icon {
+
+  &:hover .icon, 
+  &:focus .icon {
   fill: var(--accent-color);
+  }
+
+  &:hover, &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &:focus {
+    outline-color: var(--accent-color); 
+  }
+  
 }
-.customers__link:hover, .customers__link:focus {
-  border-color: var(--accent-color);
-}
+
 .customers__list .icon {
   fill: var(--icons-text-color);
   transition: var(--animation-time) cubic-bezier(0.4, 0, 0.2, 1);
-}
-.customers__link:focus {
-  outline-color: var(--accent-color); 
 }

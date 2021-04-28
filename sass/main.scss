@@ -1,4 +1,4 @@
-/* Custom CSS variables */
+
 
 @import "./utils/variables";
 
@@ -24,42 +24,7 @@
 @import "./layouts/footer";
 @import "./layouts/grid";
 @import "./layouts/business-card";
-@import "./layouts/main";
-
-
-
-
-
-
-
-
-
-
-/* 
-.works {
-    padding-top: 0;
-}
-
-.page-title-description {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    color: var( --secondary-color);
-} */
-
-/* .portfolio-item {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.87;
-    color: var(--secondary-color);
-} */
-
-/* .portfolio-example {
-    display: flex;
-} */
-
-
-
+@import "./layouts/general";
 
 
 
